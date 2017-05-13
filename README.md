@@ -13,6 +13,6 @@ A simple controller which takes care of managing the data and running the game o
 
 ## What could be improved
 
-*Better style (e.g. more CSS, images to represent rock, paper, scissors)
-*Decision between either using a CDN or including assets (not both)
-*Ability to play with another player, not just with computer. And ability to have computer vs. computer (by making use of the factory pattern)
+* Better style (e.g. more CSS, images to represent rock, paper, scissors)
+* Decision between either using a CDN or including assets (not both)
+* Ability to play with another player, not just with computer. And ability to have computer vs. computer (by making use of the factory pattern)
