@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <head>
+        <title>Rock, Paper, Scissors</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" ></script>
+        <script src="app/app.js" type="text/javascript"></script>
+        <script src="app/helpers/rps.helpers.js"></script>
+        <script src="app/controllers/rps.controller.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-mocks.js"></script>
+    </head>
+<body>
+    <div class='container' ng-app='RPSApp' ng-controller='RPSController'>
+        <h1>Choose your weapon</h1>
+        <button ng-repeat='weapon in weapons' type='button' class='btn btn-default' ng-click="battle(weapon)">{{weapon.label}}</button>
+        <div ng-if="gameOver">
+            You chose {{playerChoice.label}}, computer chose {{computerChoice.label}}.
+            <div ng-switch="outcome">
+                <div ng-switch-when="DRAW">
+                    <h2>It's a draw!</h2>
+                </div> 
+                <div ng-switch-when="WIN">
+                    <h2>You win!</h2>
+                </div> 
+                <div ng-switch-when="LOSE">
+                    <h2>You lose :'-(</h2>
+                </div> 
+                <div ng-switch-when="INVALID">
+                    <h2>This input is invalid! No idea what to do with it :(</h2>
+                </div>
+                <div ng-switch-default>
+                    <h2>GO!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
